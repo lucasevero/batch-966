@@ -6,9 +6,11 @@ def tag(type, content, attr = {})
   "<#{type}#{attr_str}>#{content}</#{type}>"
 end
 
-puts tag("h1", "Hello World!")
+# 01
 # => "<h1>Hello World</h1>"
+puts tag("h1", "Hello World!")
 
+# 02
 # => "<a src="https://my.site.com" alt="This is my website">Click me!</a>"
 
 my_attr = {
@@ -16,10 +18,3 @@ my_attr = {
   "alt" => "This is my website"
 }
 puts tag("a", "Click me!", my_attr)
-
-def me(info = {})
-  "Name: #{info[:first_name]} #{info[:last_name]}\n
-  Age: #{info[:age]}\n
-  Team: #{info[:soccer_club]}"
-end
-puts me(first_name: "luca", last_name: "severo", soccer_club: "Fluminense FC")

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My restaurants</title>
+</head>
+<body>
+  <h1>Hey there! Here are my favorite restaurants</h1>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></li>
+    <% end %>
+  </ul>
+
+</body>
+</html>
